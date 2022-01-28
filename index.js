@@ -5,15 +5,15 @@ header.setAttribute('class', 'dog-name')
 header.append('Rizzo')
 content.append(header)
 
-let dogContent = document.querySelector('div')
+let dogContent = document.createElement('div')
 dogContent.setAttribute('class', 'dog-content')
 content.append(dogContent)
 
-let dogImage = document.querySelector('img')
+let dogImage = document.createElement('img')
 dogImage.setAttribute('class', 'dog-image')
 dogImage.setAttribute('src', './assets/rizzo.jpg')
 
-let dogDetails = document.querySelector('div')
+let dogDetails = document.createElement('div')
 dogDetails.setAttribute('class', 'dog-details')
 
 dogContent.append(dogImage, dogDetails)
@@ -38,11 +38,6 @@ feedingTime2.append('12:00 pm')
 let feedingTime3 = document.createElement('li')
 feedingTime3.append('5:00 pm')
 
-feedingList.append(feedingTime1)
-feedingList.append(feedingTime2)
-feedingList.append(feedingTime3)
+feedingList.append(feedingTime1, feedingTime2, feedingTime3)
 
-dogDetails.append(bodyHeader)
-dogDetails.append(bodyParagraph)
-dogDetails.append(listHeader)
-dogDetails.append(feedingList)
+dogDetails.append(bodyHeader, bodyParagraph, listHeader, listHeader, feedingList)
